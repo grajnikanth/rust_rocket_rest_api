@@ -1,0 +1,18 @@
+[package]
+name = "rest-api-rocket"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# installing specific features only using the features attribute for the libraries
+# helps to reduce bulk in your program and helps with compile times
+[dependencies]
+rocket = "0.4.11"
+# rocket_contrib - Gives json abilities
+rocket_contrib = {version = "0.4.11", features = ["json"]}
+rusqlite = {version = "0.24.1", features = ["bundled"]}
+# serde is a serializer and deserializer so makes it easier to use json - can convert
+# a struct to a json and vice versa
+serde = {version = "1.0.137", features = ["derive"]}
+serde_json = "1.0.81"
